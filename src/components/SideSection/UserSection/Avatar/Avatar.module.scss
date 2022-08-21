@@ -1,0 +1,18 @@
+@import '../../../../variables.scss';
+
+.avatar {
+  width: 2.5rem;
+  position: relative;
+}
+
+.avatar img {
+  max-width: 2.5rem;
+}
+
+.avatar svg {
+  position: absolute;
+  top: 1.85rem;
+  left: 1.75rem;
+  font-size: 0.9rem;
+  color: $checked-color;
+}

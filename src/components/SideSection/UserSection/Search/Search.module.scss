@@ -1,0 +1,36 @@
+@import '../../../../variables.scss';
+
+.search {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search input {
+  width: 98%;
+  padding: 0.6rem 0.6rem 0.6rem 2rem;
+  border: 1px solid $border-color;
+  @include border-radius;
+  color: $text-color-primary;
+  outline: none;
+}
+
+.search input:focus {
+  outline: 1px solid $text-color-secondary;
+}
+
+.search input::-webkit-search-cancel-button:hover {
+  cursor: pointer;
+}
+
+.search input::placeholder {
+  color: $text-color-secondary;
+}
+
+.search svg {
+  position: absolute;
+  margin-left: 0.6rem;
+  font-size: 0.8rem;
+  color: $text-color-secondary;
+}

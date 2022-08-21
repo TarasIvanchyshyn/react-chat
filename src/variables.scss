@@ -1,0 +1,27 @@
+$bg-color: #f7f7f7;
+$text-color-primary: #5a5a5a;
+$text-color-secondary: #8f8f8f;
+$text-color-third: #a5a5a5;
+
+$friend-bg-color: #3f4152;
+$friend-text-color: #e2e2e2;
+$user-text-color: #ebebeb;
+
+$border-color: #e0e0e0;
+$bar-border-color: #c5c5c5;
+$chats-header-color: #40aadb;
+$checked-color: #019e01;
+
+@mixin border {
+  border-bottom: 1px solid $border-color;
+}
+
+@mixin border-radius {
+  border-radius: 20px;
+}
+
+@mixin scroll-bar {
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

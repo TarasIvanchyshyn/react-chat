@@ -1,0 +1,140 @@
+@import '../../variables.scss';
+
+.chatroom {
+  width: 64.5%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 11.5%;
+  padding: 0.5rem 1rem;
+  @include border;
+  background: $bg-color;
+}
+
+.header h3 {
+  margin-left: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  cursor: default;
+}
+
+.messages {
+  height: 67%;
+  padding: 1rem 0.5rem 0;
+  @include scroll-bar;
+}
+
+.messages::-webkit-scrollbar {
+  display: none;
+}
+
+.footer {
+  height: 21.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.2rem;
+  border-top: 1px solid $border-color;
+  background: $bg-color;
+}
+
+.input {
+  position: relative;
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.input input {
+  width: 100%;
+  padding: 0.95rem 3rem 0.95rem 1rem;
+  border: 1px solid $border-color;
+  @include border-radius;
+  font-size: 1rem;
+  color: $text-color-primary;
+}
+
+.input input::placeholder {
+  color: $text-color-third;
+}
+
+.input input:focus {
+  outline: 1px solid $text-color-secondary;
+}
+
+.input button {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: $text-color-secondary;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin-right: 1.2rem;
+  transform: rotate(45deg);
+}
+
+.message {
+  min-height: 2.7rem;
+  width: 100%;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.message span {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  @include border-radius;
+  font-weight: 500;
+  cursor: default;
+}
+
+.friend-message svg {
+  display: none;
+}
+
+.friend-message span:first-child {
+  margin-left: 0.5rem;
+  color: $friend-text-color;
+  background: $friend-bg-color;
+}
+
+.friend-message .data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 65%;
+}
+
+.user-message {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-message span {
+  max-width: 65%;
+}
+
+.user-message span:first-child {
+  color: $text-color-primary;
+  background: $user-text-color;
+}
+
+.friend-message span:nth-child(2),
+.user-message span:nth-child(2) {
+  color: $text-color-third;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+}
+
+.friend-message span:nth-child(2) {
+  margin-left: 1.3rem;
+}

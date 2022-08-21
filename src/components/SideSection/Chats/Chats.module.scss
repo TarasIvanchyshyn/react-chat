@@ -1,0 +1,120 @@
+@import '../../../variables.scss';
+
+.chats-section {
+  height: 73.5%;
+  padding-top: 2rem;
+}
+
+.header {
+  margin: 0 0 2.3rem 0.6rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: $chats-header-color;
+  cursor: default;
+}
+
+.chats {
+  height: 83.5%;
+  @include scroll-bar;
+  position: relative;
+}
+
+.chats::-webkit-scrollbar {
+  display: none;
+}
+
+.chat {
+  height: 29%;
+  padding: 0.5rem 0.4rem 0.5rem 0.7rem;
+  display: flex;
+  @include border;
+  cursor: pointer;
+  transition: 2s linear;
+}
+
+.chat:hover {
+  background: $bg-color;
+}
+
+.chat:last-child {
+  border: 1px solid transparent;
+}
+
+.avatar {
+  width: 12%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  width: 65%;
+  height: 100%;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.info p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.info p:first-child {
+  font-size: 1.05rem;
+  color: $text-color-primary;
+}
+
+.info p:nth-child(2) {
+  max-height: 50%;
+  font-size: 0.9rem;
+  color: $text-color-secondary;
+}
+
+.date {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.date p {
+  font-size: 0.9rem;
+  color: $text-color-primary;
+}
+
+@media (max-width: 1145px) {
+  .avatar {
+    width: 15%;
+  }
+  .info {
+    width: 65%;
+  }
+  .date p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .info {
+    width: 55%;
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 790px) {
+  .avatar {
+    width: 30%;
+  }
+  .info {
+    width: 75%;
+  }
+  .date {
+    display: none;
+  }
+}

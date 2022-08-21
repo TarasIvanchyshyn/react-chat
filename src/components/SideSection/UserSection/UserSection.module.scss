@@ -1,0 +1,17 @@
+@import '../../../variables.scss';
+
+.user-section {
+  height: 23%;
+  padding: 0.8rem 0.5rem 0.2rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  background: $bg-color;
+  @include border;
+}
+
+.user {
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
